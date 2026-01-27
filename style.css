@@ -1,0 +1,114 @@
+/* =========================
+   Expense List Styles
+========================= */
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Single row */
+.expense-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb; /* gray-200 */
+}
+
+/* Left section */
+.expense-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.expense-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+
+}
+
+.expense-category {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f2937; /* gray-800 */
+}
+
+.expense-amount {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Right section */
+.expense-right {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* similar to gap-12 */
+}
+
+.expense-date {
+  font-size: 0.875rem;
+  color: #6b7280; /* gray-500 */
+}
+
+/* Actions */
+.expense-actions {
+  width: 6rem; /* w-24 */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.expense-actions > div,
+.expense-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #e5e7eb; /* gray-200 */
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+/* Buttons */
+.edit-btn {
+  font-size: 0.875rem;
+  color: #2563eb; /* blue-600 */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  font-size: 0.875rem;
+  color: #dc2626; /* red-600 */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+/* Category colors */
+.dot-food {
+  background-color: #f97316; /* orange */
+}
+
+.dot-rent {
+  background-color: #22c55e; /* green */
+}
+
+.dot-travel {
+  background-color: #3b82f6; /* blue */
+}
+
+.dot-others {
+  background-color: #a855f7; /* purple */
+}

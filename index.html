@@ -1,203 +1,238 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Tailwind CDN -->
+     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Expense Tracker</title>
-</head>
+  </head>
 
-<body class="font-[Inter] bg-gray-100 text-gray-900">
+  <body class="font-[Inter] bg-gray-100 text-gray-900">
     <!-- NAVBAR -->
     <nav class="bg-white border-b">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-semibold">Expense Tracker</h1>
+      <div
+        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-semibold">Expense Tracker</h1>
 
-            <div class="flex gap-3">
-                <select class="border rounded-md px-3 py-2 text-sm">
-                    <option>January</option>
-                </select>
-                <select class="border rounded-md px-3 py-2 text-sm">
-                    <option>2026</option>
-                </select>
-            </div>
+        <div class="flex gap-3">
+          <select class="border rounded-md px-3 py-2 text-sm">
+            <option>January</option>
+          </select>
+          <select class="border rounded-md px-3 py-2 text-sm">
+            <option>2026</option>
+          </select>
         </div>
+      </div>
     </nav>
 
     <!-- MAIN CONTENT -->
     <main class="max-w-6xl mx-auto px-4 py-8">
-        <!-- SUMMARY CARDS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <!-- Total Expense -->
-            <div class="bg-white rounded-xl shadow-sm p-6 flex items-center gap-4">
-                <div class="bg-emerald-100 p-3 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" fill="currentColor"
-                        viewBox="0 0 24 24">
-                        <path
-                            d="M2 7a3 3 0 013-3h14a1 1 0 110 2H5a1 1 0 00-1 1v10a1 1 0 001 1h14a1 1 0 110 2H5a3 3 0 01-3-3V7z" />
-                        <path d="M20 8a2 2 0 012 2v4a2 2 0 01-2 2h-4a3 3 0 010-6h4z" />
-                    </svg>
-                </div>
-                <div>
-                    <p class="text-sm text-gray-500">Total Expense</p>
-                    <p class="text-2xl font-semibold">₹12,450</p>
-                </div>
-            </div>
-
-            <!-- Top Category -->
-            <div class="bg-white rounded-xl shadow-sm p-6 flex items-center gap-4">
-                <div class="bg-orange-100 p-3 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-600" fill="currentColor"
-                        viewBox="0 0 24 24">
-                        <path d="M11 3a1 1 0 10-2 0v7a3 3 0 006 0V3a1 1 0 10-2 0v7a1 1 0 11-2 0V3z" />
-                        <path
-                            d="M5 3a1 1 0 00-1 1v6a4 4 0 004 4v6a1 1 0 102 0V3a1 1 0 00-2 0v6a2 2 0 11-4 0V4a1 1 0 00-1-1z" />
-                    </svg>
-                </div>
-                <div>
-                    <p class="text-sm text-gray-500">Top Category</p>
-                    <p class="text-2xl font-semibold">₹4,200</p>
-                    <p class="text-xs text-gray-400">Highest Spent</p>
-                </div>
-            </div>
+      <!-- SUMMARY CARDS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 ">
+        <!-- Total Expense -->
+        <div class="bg-white rounded-xl shadow-sm p-6 flex items-center gap-4">
+          <div class="bg-emerald-100 p-3 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-emerald-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M2 7a3 3 0 013-3h14a1 1 0 110 2H5a1 1 0 00-1 1v10a1 1 0 001 1h14a1 1 0 110 2H5a3 3 0 01-3-3V7z"
+              />
+              <path d="M20 8a2 2 0 012 2v4a2 2 0 01-2 2h-4a3 3 0 010-6h4z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500">Total Expense</p>
+            <p class="text-2xl font-semibold">₹12,450</p>
+          </div>
         </div>
 
-        <!-- LOWER SECTION -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- ADD EXPENSE -->
-            <div class="bg-white rounded-xl shadow-sm p-6">
-                <h2 class="text-lg font-semibold mb-4">Add Expense</h2>
-
-                <div class="mb-4">
-                    <label class="text-sm text-gray-600 mb-1 block">Amount</label>
-                    <input type="number" placeholder="Enter amount"
-                        class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
-                </div>
-
-                <div class="mb-6">
-                    <label class="text-sm text-gray-600 mb-1 block">Category</label>
-                    <select
-                        class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400">
-                        <option>Food</option>
-                        <option>Rent</option>
-                        <option>Travel</option>
-                        <option>Others</option>
-                    </select>
-                </div>
-
-                <button
-                    class="w-full bg-emerald-500 text-white py-2 rounded-md font-medium hover:bg-emerald-600 transition">
-                    Add Expense
-                </button>
-            </div>
-
-            <!-- EXPENSE LIST -->
-            <div class="bg-white rounded-lg shadow-sm p-6">
-                <div class="flex flex-col md:flex-row justify-between items-center mb-4 border-b pb-2">
-                    <select class="border rounded-lg px-3 py-2 text-sm">
-                        <option>All Categories</option>
-                        <option>Food</option>
-                        <option>Rent</option>
-                        <option>Travel</option>
-                        <option>Others</option>
-                    </select>
-
-                    <select id="dates" class="border rounded-lg px-3 py-2 text-sm">
-                        <option>14</option>
-                        <option>30</option>
-                        <option>10</option>
-                    </select>
-
-                    <input type="number" placeholder="Search Amount" class="border rounded-lg px-3 py-2 text-sm" />
-
-                    <button id="clear-button"
-                        class="bg-gray-300 hover:bg-gray-400 border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm">
-                        Clear
-                    </button>
-                </div>
-
-                <h2 class="text-xl font-semibold mb-4 text-gray-700 pb-2 border-b">
-                    Expenses
-                </h2>
-
-                <div class="grid grid-cols-[1fr_auto] items-center border-b pb-3 mb-2">
-
-                    <!-- Category -->
-                    <div class="flex items-center gap-2">
-                        <div class="bg-gray-200 rounded-full p-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
-                            </svg>
-                        </div>
-
-                        <p class="text-sm font-semibold text-gray-600">Category</p>
-                    </div>
-
-                    <!-- Date + Edit -->
-                    <div class="flex items-center gap-12">
-                        <span class="text-sm font-semibold text-gray-600 w-12 text-center">
-                            Date
-                        </span>
-
-                        <!-- fixed width for alignment -->
-                        <span class="text-sm font-semibold text-gray-600 w-24 text-right">
-                            Edit
-                        </span>
-                    </div>
-
-                </div>
-
-                <div class="grid grid-cols-[1fr_auto] items-center border-b py-2 mb-2">
-
-                    <!-- Category -->
-                    <div class="flex items-center gap-2">
-                        <span class="h-2.5 w-2.5 rounded-full bg-orange-500"></span>
-                        <p class="text-sm font-medium text-gray-800">Food</p>
-                        <p class="text-sm font-medium text-gray-800">₹700</p>
-                    </div>
-
-                    <!-- Date + Actions -->
-                    <div class="flex items-center gap-12">
-                        <p class="text-sm text-gray-500">
-                            26 Jan
-                        </p>
-
-                        <!-- SAME width as header -->
-                        <div class="w-24 flex justify-end">
-                            <div class="flex items-center gap-3 bg-gray-200 rounded-md px-3 py-1">
-                                <button class="text-sm text-blue-600 hover:underline">
-                                    Edit
-                                </button>
-                                <button class="text-sm text-red-500 hover:underline">
-                                    Delete
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- CHART PLACEHOLDER -->
-            <div class="bg-white rounded-xl shadow-sm p-6">
-                <h2 class="text-lg font-semibold mb-4">Expenses by Category</h2>
-                <div class="h-48 flex items-center justify-center text-gray-400">
-                    Chart goes here
-                </div>
-            </div>
+        <!-- Top Category -->
+        <div class="bg-white rounded-xl shadow-sm p-6 flex items-center gap-4">
+          <div class="bg-orange-100 p-3 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-orange-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11 3a1 1 0 10-2 0v7a3 3 0 006 0V3a1 1 0 10-2 0v7a1 1 0 11-2 0V3z"
+              />
+              <path
+                d="M5 3a1 1 0 00-1 1v6a4 4 0 004 4v6a1 1 0 102 0V3a1 1 0 00-2 0v6a2 2 0 11-4 0V4a1 1 0 00-1-1z"
+              />
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500">Top Category</p>
+            <p class="text-2xl font-semibold">₹4,200</p>
+            <p class="text-xs text-gray-400">Highest Spent</p>
+          </div>
         </div>
+      </div>
+
+      <!-- LOWER SECTION -->
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+       <div class="flex flex-col gap-6">
+
+        <!-- ADD EXPENSE -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="text-lg font-semibold mb-4">Add Expense</h2>
+
+          <div class="mb-4">
+            <label class="text-sm text-gray-600 mb-1 block">Amount</label>
+            <input
+              id = "amount-input"
+              type="number"
+              placeholder="Enter amount"
+              class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label  class="text-sm text-gray-600 mb-1 block">Category</label>
+            <select
+              id = "category-input"
+              class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            >
+              <option>Food</option>
+              <option>Rent</option>
+              <option>Travel</option>
+              <option>Others</option>
+            </select>
+          </div>
+
+          <button id ="add-expense-button"
+            class="w-full bg-emerald-500 text-white py-2 rounded-md font-medium hover:bg-emerald-600 transition"
+          >
+            Add Expense
+          </button>
+        </div>
+        <!-- CHART PLACEHOLDER -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="text-lg font-semibold mb-4">Expenses by Category</h2>
+          <div class="h-48 flex items-center justify-center text-gray-400">
+            Chart goes here
+          </div>
+         </div>
+        </div>
+
+         <!-- EXPENSE LIST -->
+        <div class="bg-white rounded-lg shadow-sm p-6 overflow-y-auto flex flex-col">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center mb-4 border-b gap-4 pb-2"
+          >
+            <select class="border rounded-lg px-3 py-2 text-sm">
+              <option>All Categories</option>
+              <option>Food</option>
+              <option>Rent</option>
+              <option>Travel</option>
+              <option>Others</option>
+            </select>
+
+            <select id="dates" class="border rounded-lg px-3 py-2 text-sm">
+              <option>14</option>
+              <option>30</option>
+              <option>10</option>
+            </select>
+
+            <input
+              type="number"
+              placeholder="Search Amount"
+              class="border rounded-lg px-3 py-2 text-sm"
+            />
+
+            <button
+              id="clear-button"
+              class="bg-gray-300 hover:bg-gray-400 border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm"
+            >
+              Clear
+            </button>
+          </div>
+
+          <h2 class="text-xl font-semibold mb-4 text-gray-700 pb-2 border-b">
+            Expenses
+          </h2>
+
+          <div
+            class="grid grid-cols-[1fr_auto] items-center border-b pb-3 mb-2"
+          >
+            <!-- Category -->
+            <div class="flex items-center gap-2">
+              <div class="bg-gray-200 rounded-full p-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-gray-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"
+                  />
+                </svg>
+              </div>
+
+              <p class="text-sm font-semibold text-gray-600">Category</p>
+            </div>
+
+            <!-- Date + Edit -->
+            <div class="flex items-center gap-12">
+              <span
+                class="text-sm font-semibold text-gray-600 w-12 text-center"
+              >
+                Date
+              </span>
+
+              <!-- fixed width for alignment -->
+              <span class="text-sm font-semibold text-gray-600 w-24 text-right">
+                Edit
+              </span>
+            </div>
+          </div>
+          <!-- Expense list items will dynamically added in here -->
+
+          <div class="expense-list flex-1 overflow-y-auto max-h-[calc(100vh-420px)]">
+            <div class="expense-row">
+              <!-- Left -->
+              <div class="expense-left">
+                <span class="expense-dot"></span>
+                <p class="expense-category">Food ///</p>
+                <p class="expense-amount">₹700</p>
+              </div>
+
+              <!-- Right -->
+              <div class="expense-right">
+                <p class="expense-date">26 Jan</p>
+
+                <div class="expense-actions">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+
+
     </main>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
