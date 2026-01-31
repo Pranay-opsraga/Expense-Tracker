@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Tailwind CDN -->
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
@@ -37,7 +37,7 @@
     <!-- MAIN CONTENT -->
     <main class="max-w-6xl mx-auto px-4 py-8">
       <!-- SUMMARY CARDS -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 ">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <!-- Total Expense -->
         <div class="bg-white rounded-xl shadow-sm p-6 flex items-center gap-4">
           <div class="bg-emerald-100 p-3 rounded-lg">
@@ -55,87 +55,95 @@
           </div>
           <div>
             <p class="text-sm text-gray-500">Total Expense</p>
-            <p class="text-2xl font-semibold">₹12,450</p>
+            <p id="total-expense-value" class="text-2xl font-semibold">
+              ₹12,450
+            </p>
           </div>
         </div>
 
         <!-- Top Category -->
         <div class="bg-white rounded-xl shadow-sm p-6 flex items-center gap-4">
-          <div class="bg-orange-100 p-3 rounded-lg">
+          <div class="bg-amber-200 p-3 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-orange-600"
-              fill="currentColor"
+              fill="none"
               viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
             >
               <path
-                d="M11 3a1 1 0 10-2 0v7a3 3 0 006 0V3a1 1 0 10-2 0v7a1 1 0 11-2 0V3z"
-              />
-              <path
-                d="M5 3a1 1 0 00-1 1v6a4 4 0 004 4v6a1 1 0 102 0V3a1 1 0 00-2 0v6a2 2 0 11-4 0V4a1 1 0 00-1-1z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
               />
             </svg>
           </div>
           <div>
-            <p class="text-sm text-gray-500">Top Category</p>
-            <p class="text-2xl font-semibold">₹4,200</p>
+            <p id="top-category" class="text-sm text-gray-500">Top Category</p>
+            <p id="top-category-value" class="text-2xl font-semibold">₹4,200</p>
             <p class="text-xs text-gray-400">Highest Spent</p>
           </div>
         </div>
       </div>
 
       <!-- LOWER SECTION -->
- <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-       <div class="flex flex-col gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex flex-col gap-6">
+          <!-- ADD EXPENSE -->
+          <div class="bg-white rounded-xl shadow-sm p-6">
+            <h2 class="text-lg font-semibold mb-4">Add Expense</h2>
 
-        <!-- ADD EXPENSE -->
-        <div class="bg-white rounded-xl shadow-sm p-6">
-          <h2 class="text-lg font-semibold mb-4">Add Expense</h2>
+            <div class="mb-4">
+              <label class="text-sm text-gray-600 mb-1 block">Amount</label>
+              <input
+                id="amount-input"
+                type="number"
+                placeholder="Enter amount"
+                class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              />
+            </div>
 
-          <div class="mb-4">
-            <label class="text-sm text-gray-600 mb-1 block">Amount</label>
-            <input
-              id = "amount-input"
-              type="number"
-              placeholder="Enter amount"
-              class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400"
-            />
-          </div>
+            <div class="mb-6">
+              <label class="text-sm text-gray-600 mb-1 block">Category</label>
+              <select
+                id="category-input"
+                class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              >
+                <option>Food</option>
+                <option>Rent</option>
+                <option>Travel</option>
+                <option>Others</option>
+              </select>
+            </div>
 
-          <div class="mb-6">
-            <label  class="text-sm text-gray-600 mb-1 block">Category</label>
-            <select
-              id = "category-input"
-              class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            <button
+              id="add-expense-button"
+              class="w-full bg-emerald-500 text-white py-2 rounded-md font-medium hover:bg-emerald-600 transition"
             >
-              <option>Food</option>
-              <option>Rent</option>
-              <option>Travel</option>
-              <option>Others</option>
-            </select>
+              Add Expense
+            </button>
           </div>
-
-          <button id ="add-expense-button"
-            class="w-full bg-emerald-500 text-white py-2 rounded-md font-medium hover:bg-emerald-600 transition"
-          >
-            Add Expense
-          </button>
-        </div>
-        <!-- CHART PLACEHOLDER -->
-        <div class="bg-white rounded-xl shadow-sm p-6">
-          <h2 class="text-lg font-semibold mb-4">Expenses by Category</h2>
-          <div class="h-48 flex items-center justify-center text-gray-400">
-            Chart goes here
+          <!-- CHART PLACEHOLDER -->
+          <div class="bg-white rounded-xl shadow-sm p-6">
+            <h2 class="text-lg font-semibold mb-4">Expenses by Category</h2>
+            <div class="h-48 flex items-center justify-center">
+              <canvas id="expense-chart" style="height:360px"></canvas>
+            </div>
           </div>
-         </div>
         </div>
 
-         <!-- EXPENSE LIST -->
-        <div class="bg-white rounded-lg shadow-sm p-6 overflow-y-auto flex flex-col">
+        <!-- EXPENSE LIST -->
+        <div
+          class="bg-white rounded-lg shadow-sm p-6 overflow-y-auto flex flex-col"
+        >
           <div
             class="flex flex-col md:flex-row justify-between items-center mb-4 border-b gap-4 pb-2"
           >
-            <select class="border rounded-lg px-3 py-2 text-sm">
+            <select
+              id="filter-category"
+              class="border rounded-lg px-3 py-2 text-sm"
+            >
               <option>All Categories</option>
               <option>Food</option>
               <option>Rent</option>
@@ -143,13 +151,14 @@
               <option>Others</option>
             </select>
 
-            <select id="dates" class="border rounded-lg px-3 py-2 text-sm">
-              <option>14</option>
-              <option>30</option>
-              <option>10</option>
-            </select>
+            <input
+              id="dates"
+              type="number"
+              class="border rounded-lg py-2 text-sm w-12 text-center"
+            />
 
             <input
+              id="amount-search"
               type="number"
               placeholder="Search Amount"
               class="border rounded-lg px-3 py-2 text-sm"
@@ -207,7 +216,9 @@
           </div>
           <!-- Expense list items will dynamically added in here -->
 
-          <div class="expense-list flex-1 overflow-y-auto max-h-[calc(100vh-420px)]">
+          <div
+            class="expense-list flex-1 overflow-y-auto max-h-[calc(100vh-420px)]"
+          >
             <div class="expense-row">
               <!-- Left -->
               <div class="expense-left">
@@ -228,11 +239,9 @@
             </div>
           </div>
         </div>
-
-  </div>
-
-
+      </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
